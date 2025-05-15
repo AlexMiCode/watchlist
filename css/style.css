@@ -1,9 +1,25 @@
-/* Текст */
+/* Общее */
+
 body {
     background: #EFEDE1;
-    font-family: Arial, sans-serif;
+    font-family: "Ubuntu Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
     color: #282934;
 }
+
+/* Текст */
+/* .ubuntu-mono-regular {
+  font-family: "Ubuntu Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.ubuntu-mono-bold {
+  font-family: "Ubuntu Mono", monospace;
+  font-weight: 700;
+  font-style: normal;
+} */
 
 /* Панели */
 /* Вверхняя панель */
@@ -47,6 +63,18 @@ body {
     justify-content: center;
     width: 100%;
     font-size: 20px;
+    font-family: "Ubuntu Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
+    color: #282934;
+}
+
+.search-bar input::placeholder {
+    font-size: 20px;
+    font-family: "Ubuntu Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
+    color: #282934;
 }
 
 .right-section {
@@ -63,10 +91,21 @@ body {
     align-items: center;
     gap: 12px;
     padding: 0px 16px 0px 6px;
+    cursor: pointer;
+    color: #282934;
+    text-decoration: none;
+}
+
+.user-section:hover{
+    background-color: #282934;
+    color: #E8E6DB;
 }
 
 .username {
     font-size: 20px;
+    font-family: "Ubuntu Mono", monospace;
+    font-weight: 700;
+    font-style: normal;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -94,15 +133,31 @@ body {
     top: 0;
 }
 
-.logo {}
+/* .logo {} */
 
 .logo-ico {
+    display: none;
     height: 40px;
     width: auto;
 }
 
 .sidebar-buttons:not(:last-child) {
     margin-bottom: 20px;
+}
+
+.separator {
+    height: 200px;
+    border-left: 3px solid #E8E6DB;
+}
+
+.sidebar::before {
+    content: " ";
+    background: #E8E6DB;
+    bottom: 33px;
+    width: 3px;
+    left: 96px;
+    top: 33px;
+    position: absolute;
 }
 
 /* Панель. Общее */
@@ -118,11 +173,11 @@ body {
     align-items: center;
 }
 
-.btn-element:hover{
+.btn-element:hover {
     background-color: #282934;
 }
 
-.btn-element:hover img{
+.btn-element:hover img {
     -webkit-filter: invert(100%);
     filter: invert(100%);
 }
@@ -332,7 +387,7 @@ body {
     gap: 16px;
 }
 
-.film-title-content{
+.film-title-content {
     font-size: 64px;
     margin: 0;
 }
@@ -407,7 +462,7 @@ body {
     gap: 32px;
 }
 
-.film-similar-title h2{
+.film-similar-title h2 {
     font-size: 48px;
     margin: 0;
 }
