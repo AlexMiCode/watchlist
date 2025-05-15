@@ -1,0 +1,423 @@
+/* Текст */
+body {
+    background: #EFEDE1;
+    font-family: Arial, sans-serif;
+    color: #282934;
+}
+
+/* Панели */
+/* Вверхняя панель */
+.top-bar {
+    height: 96px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 48px;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    left: 176px;
+    right: 0;
+    z-index: 100;
+}
+
+.left-section {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+
+.search-bar {
+    height: 64px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border-radius: 28px;
+    width: 472px;
+    background: #E8E6DB;
+    padding: 0px 12px;
+}
+
+.search-bar input {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    font-size: 20px;
+}
+
+.right-section {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.user-section {
+    height: 64px;
+    background: #E8E6DB;
+    border-radius: 1000px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 0px 16px 0px 6px;
+}
+
+.username {
+    font-size: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.user-avatar {
+    width: 52px;
+    height: 52px;
+    border-radius: 1000px;
+    object-fit: cover;
+}
+
+/* Боковая панель */
+.sidebar {
+    width: 96px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 32px;
+    box-sizing: border-box;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+.logo {}
+
+.logo-ico {
+    height: 40px;
+    width: auto;
+}
+
+.sidebar-buttons:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+/* Панель. Общее */
+.btn-element {
+    width: 64px;
+    height: 64px;
+    margin: 10px 0;
+    background: #E8E6DB;
+    border-radius: 1000px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-element:hover{
+    background-color: #282934;
+}
+
+.btn-element:hover img{
+    -webkit-filter: invert(100%);
+    filter: invert(100%);
+}
+
+
+
+
+/* контент */
+
+.main-content {
+    background: white;
+    display: flex;
+    flex-direction: column;
+    border-top-left-radius: 28px;
+    border-top-right-radius: 28px;
+    position: fixed;
+    top: 112px;
+    left: 176px;
+    right: 0;
+    bottom: 0;
+    overflow-y: auto;
+    z-index: 1;
+    padding: 64px 32px;
+    gap: 48px;
+}
+
+.collection-list {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.unopen-list {
+    display: flex;
+    gap: 16px;
+}
+
+.unopen-list h3 {
+    font-size: 64px;
+    padding: 0;
+    margin: 0;
+}
+
+.film-list {
+    display: grid;
+    overflow-x: auto;
+    scrollbar-width: none;
+    grid-auto-flow: column;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 90px;
+    width: 100%;
+}
+
+.film-list::-webkit-scrollbar {
+    display: none;
+}
+
+.film {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 240px;
+    height: 100%;
+}
+
+.film-cover {
+    background: #D9D9D9;
+    border-radius: 28px;
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+    display: block;
+}
+
+.film-title {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    font-size: 32px;
+}
+
+
+/* search.html */
+
+.search-result {
+    font-size: 32px;
+    margin: 0;
+}
+
+.films-list {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+
+
+.collections-list {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.allcollections-list {
+    display: grid;
+    overflow-x: auto;
+    scrollbar-width: none;
+    grid-auto-flow: column;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 90px;
+    width: 100%;
+}
+
+.collection {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 240px;
+    height: 100%;
+}
+
+.collection-cover {
+    background: #D9D9D9;
+    border-radius: 28px;
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    display: block;
+}
+
+.collection-title {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+.users-list {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.user-list {
+    display: grid;
+    overflow-x: auto;
+    scrollbar-width: none;
+    grid-auto-flow: column;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 64px;
+    width: 100%;
+}
+
+.user {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 120px;
+    height: 100%;
+}
+
+.user-cover {
+    background: #D9D9D9;
+    border-radius: 28px;
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    display: block;
+}
+
+.user-title {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+
+/* content.html */
+
+.film-content {
+    display: flex;
+    gap: 48px;
+}
+
+.film-cover-content {
+    background: #D9D9D9;
+    width: 240px;
+    height: 360px;
+    border-radius: 28px;
+    object-fit: cover;
+}
+
+.film-information {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.film-information-top {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.film-information-top-1 {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.film-title-content{
+    font-size: 64px;
+    margin: 0;
+}
+
+.film-genres {
+    display: flex;
+    margin: 0;
+}
+
+.film-information-top-2 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.description {
+    max-width: 732px;
+    max-height: 100%;
+    text-align: justify;
+    word-wrap: break-word;
+    overflow: hidden;
+    margin: 0;
+}
+
+.description-more {
+    display: none;
+}
+
+.film-user-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    justify-content: end;
+}
+
+.film-frames {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.film-frames-title {
+    display: flex;
+    gap: 16px;
+}
+
+.film-frames-title h2 {
+    font-size: 48px;
+    margin: 0;
+}
+
+.film-frames-list {
+    display: grid;
+    overflow-x: auto;
+    scrollbar-width: none;
+    grid-auto-flow: column;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 64px;
+    width: 100%;
+}
+
+.film-frame {
+    background: #D9D9D9;
+    border-radius: 28px;
+    width: 100%;
+    height: 165px;
+    object-fit: cover;
+}
+
+.film-similar {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.film-similar-title h2{
+    font-size: 48px;
+    margin: 0;
+}
+
+.film-similar-list {
+    display: grid;
+    overflow-x: auto;
+    scrollbar-width: none;
+    grid-auto-flow: column;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 64px;
+    width: 100%;
+}
